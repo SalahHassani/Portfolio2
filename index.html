@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Mapmaker Game</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+
+  </head>
+  <body>
+
+    <div class="welcome">
+    <div class="modal2">
+      <div class="game-container">
+          <div class="slider1 game-description message activeMessage">
+              <div>
+                  <h1>Welcome to The Mapmaker Game!</h1>
+                  <h3>
+                      <p>Embark on a journey as the imperial mapmaker for the Potato Empire. Explore unknown lands,
+                          fulfill Empress French Frie's missions, and build the most magnificent empire!
+                      </p>
+                  </h3>
+              </div>
+          </div>
+
+          <div class="slider2 mission-container hidden message">
+
+            <div class="missionPoints">
+                <div>
+                    <div class="missionTitle">
+                        <h2>Basic Mission</h2>
+                    </div>
+                    <div class="missionResults">
+                        <div class="missionResults-1">
+                            <div class="missionBox">
+                                <div class="mission"><img src="./missions_eng/edgeOfTheForest.png" alt="Mission Image"></div>
+                            </div>
+                            <div class="missionBox">
+                                <div class="mission"><img src="./missions_eng/sleepyValley.png" alt="Mission Image"></div>
+                            </div>
+                        </div>
+                        <div class="missionResults-2">
+                            <div class="missionBox">
+                                <div class="mission"><img src="./missions_eng/wateringPotatoes.png" alt="Mission Image"></div>
+                            </div>
+                            <div class="missionBox">
+                                <div class="mission"><img src="./missions_eng/borderlands.png" alt="Mission Image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slider3 mission-container hidden message">
+
+              <div class="missionPoints">
+                  <div>
+                      <div class="missionTitle">
+                          <h2>Extra Mission</h2>
+                      </div>
+                      <div class="missionResults">
+                          <div class="missionResults-1">
+                              <div class="missionBox">
+                                  <div class="mission"><img src="./missions_eng/treeLine.png" alt="Mission Image"></div>
+                              </div>
+                              <div class="missionBox">
+                                  <div class="mission"><img src="./missions_eng/wealthyTown.png" alt="Mission Image"></div>
+                              </div>
+                              <div class="missionBox">
+                                  <div class="mission"><img src="./missions_eng/wateringCanal.png" alt="Mission Image"></div>
+                              </div>
+                              <div class="missionBox">
+                                  <div class="mission"><img src="./missions_eng/magiciansValley.png" alt="Mission Image"></div>
+                              </div>
+                          </div>
+                          <div class="missionResults-2">
+                              <div class="missionBox">
+                                  <div class="mission"><img src="./missions_eng/emptySite.png" alt="Mission Image"></div>
+                              </div>
+                              <div class="missionBox">
+                                  <div class="mission"><img src="./missions_eng/terracedHouse.png" alt="Mission Image"></div>
+                              </div>
+                              <div class="missionBox">
+                                  <div class="mission"><img src="./missions_eng/oddNumberedSilos.png" alt="Mission Image"></div>
+                              </div>
+                              <div class="missionBox">
+                                  <div class="mission"><img src="./missions_eng/richCountrySide.png" alt="Mission Image"></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+          </div>
+          <div class="buttons-container">
+
+            <button class="button skipButton">Skip</button>
+            <button class="button nextButton">Next</button>
+
+        </div>
+      </div>
+  </div>
+</div>
+
+    <div id="main">
+      <div class="col-6" id="mapContainer">
+        <span><h1>POTATO MAP</h1></span>
+        <div id="map"></div>
+        <div id="scoreTrack">
+          <div class="scoreLeft">
+            <h2>Highest Score : <span class="highestScore">0</span></h2>
+          </div>
+          <div class="scoreRight">
+            <h2>Last Score : <span class="lastScore">0</span></h2>
+          </div>
+        </div>
+      </div>
+
+      <div id="details" class="col-6">
+        <div class="score"></div>
+        <div>
+          <span
+            ><h3>Current Season: <span class="seasonText"> --- </span></h3>
+          </span>
+          <hr />
+        </div>
+        <div class="missions"></div>
+
+        <h3>
+          Elapsed Time in Curent Season:
+          <span class="ELementNumber">0</span>
+        </h3>
+
+        <hr />
+        <div class="nextElement"></div>
+      </div>
+
+      <!-- Hidden Reservation -->
+      <section class="container">
+        <div class="modal hidden gameOverMessage">
+          <!-- <button class="close-modal">&times;</button> -->
+          <div class="go"><h1>%%%%% Game Over %%%%%</h1></div>
+          <div class="missionPoints">
+            <div>
+              <div class="missionTitle"><h2>Basic Mission Points</h2></div>
+              <div class="missionResults">
+                <div class="missionResults-1">
+                  <div><h3>Edge Of The Forest Mission : <span class="edgeOfTheForest"> 0 </span></div>
+                  <div><h3>Sleepy Valley Mission : <span class="sleepyValley"> 0 </span></div>
+                </div>
+                <div class="missionResults-2">
+                  <div><h3>Watering Potatoes Mission : <span class="wateringPotatoes"> 0 </span></div>
+                  <div><h3>Borderlands Mission : <span class="borderlands"> 0 </span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="missionPoints">
+            <div>
+              <div class="missionTitle"><h2>Extra Mission Points</h2></div>
+              <div class="missionResults">
+                <div class="missionResults-1">
+                  <div><h3>Tree Line Mission : <span class="treeLine"> 0 </span></h3></div>
+                  <div><h3>Watering Canal Mission : <span class="wateringCanal"> 0 </span></div>
+                  <div><h3>EmptSite Mission : <span class="emptySite"> 0 </span></div>
+                  <div><h3>Terraced House Mission : <span class="terracedHouse"> 0 </span></div>
+                </div>
+                <div class="missionResults-2">
+                  <div><h3>Wealthy Town Mission : <span class="wealthyTown"> 0 </span></div>
+                  <div><h3>Magicians Valley Mission : <span class="magiciansValley"> 0 </span></div>
+                  <div><h3>Odd Numbered Silos Mission : <span class="oddNumberedSilos"> 0 </span></div>
+                  <div><h3>Rich Country Side Mission : <span class="richCountrySide"> 0 </span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="totalPoints"><h1>Total Points</h1></div>
+
+          <div class="missionPoints">
+            <div>
+              <div class="missionTitle"><h2>Old Stats</h2></div>
+              <div class="missionResults">
+                <div class="missionResults-2">
+                  <div><h3>Current Game Points : <span class="currentGamePoints"> 0 </span></div>
+                </div>
+                <div class="missionResults-1">
+                  <div><h3>Last Game Points : <span class="lastGamePoints"> 0 </span></div>
+                </div>
+                <div class="missionResults-2">
+                  <div><h3>Highest Game Points : <span class="highestGamePoints"> 0 </span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="buttons-container">
+            <button class="button quit">Quit</button>
+            <button class="button reset">Reset</button>
+        </div>
+          <div class="buttons"></div>
+        </div>
+        <!--The Blur view will come from here-->
+        <div class="overlay"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

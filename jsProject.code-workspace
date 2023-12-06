@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../../Downloads/assignment_assets"
+	}
+],
+  "settings": {
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.multiRootWorkspaceName": "jsProject"
+  }
+}
